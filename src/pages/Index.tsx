@@ -42,13 +42,17 @@ const Index = () => {
             From roadmaps to internships, connect with peers and accelerate your tech career with AI-powered guidance.
           </p>
           <div className="flex gap-4 justify-center animate-fade-in">
-            <Button size="lg" className="group">
-              Explore Roadmaps
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline">
-              View Programs
-            </Button>
+            <Link to="/roadmap-generator">
+              <Button size="lg" className="group">
+                Generate My Roadmap
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link to="/programs">
+              <Button size="lg" variant="outline">
+                View Programs
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -17,7 +17,8 @@ const programs = [
     deadline: "April 2025",
     techStacks: ["Python", "JavaScript", "Go", "Rust", "C++"],
     description: "Work with open-source organizations on meaningful projects",
-    difficulty: "Medium"
+    difficulty: "Medium",
+    link: "https://summerofcode.withgoogle.com/"
   },
   {
     id: 2,
@@ -29,7 +30,8 @@ const programs = [
     deadline: "Rolling",
     techStacks: ["React", "Node.js", "Python", "DevOps"],
     description: "Remote internship alternative for aspiring technologists",
-    difficulty: "Medium"
+    difficulty: "Medium",
+    link: "https://fellowship.mlh.io/"
   },
   {
     id: 3,
@@ -41,7 +43,8 @@ const programs = [
     techStacks: ["Python", "Ruby", "JavaScript", "Rust"],
     deadline: "January 2025",
     description: "Internships in open source and open science",
-    difficulty: "Medium"
+    difficulty: "Medium",
+    link: "https://www.outreachy.org/"
   },
   {
     id: 4,
@@ -53,7 +56,8 @@ const programs = [
     deadline: "March 2025",
     techStacks: ["Linux", "Kubernetes", "Go", "C"],
     description: "Mentorship programs across LF projects",
-    difficulty: "Hard"
+    difficulty: "Hard",
+    link: "https://mentorship.lfx.linuxfoundation.org/"
   },
   {
     id: 5,
@@ -65,7 +69,8 @@ const programs = [
     deadline: "December 2024",
     techStacks: ["C++", "Qt", "QML", "Python"],
     description: "Contribute to KDE community projects",
-    difficulty: "Easy"
+    difficulty: "Easy",
+    link: "https://season.kde.org/"
   },
   {
     id: 6,
@@ -77,7 +82,8 @@ const programs = [
     deadline: "February 2025",
     techStacks: ["JavaScript", "TypeScript", "Ruby", "Go"],
     description: "Work on GitHub's open-source projects",
-    difficulty: "Hard"
+    difficulty: "Hard",
+    link: "https://github.com/about/careers"
   }
 ];
 
@@ -195,13 +201,22 @@ const Programs = () => {
               </div>
 
               <div className="flex gap-2">
-                <Button className="flex-1" variant="outline">
-                  View Prep Guide
-                </Button>
-                <Button className="flex-1">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Apply
-                </Button>
+                <Link to="/roadmap-generator" className="flex-1">
+                  <Button className="w-full" variant="outline">
+                    View Prep Guide
+                  </Button>
+                </Link>
+                <a 
+                  href={program.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
+                  <Button className="w-full">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Apply
+                  </Button>
+                </a>
               </div>
             </Card>
           ))}
